@@ -3,7 +3,7 @@ import React from "react";
 const VideoDetail = ({ video }) => {
   if (!video) {
     return <div>
-       <h1>Enter search keyword to load...</h1>
+       <h3>Busca la micro por agente, habilidad, mapa, equipo.</h3>
     </div>;
   }
 
