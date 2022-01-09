@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>VALO BRAIN</title>
         <meta name="Valo Brain Website" content="Micro strats for Valorant" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../public/favicon.ico" />
       </Head>
       <Navbar />
       <Flex>

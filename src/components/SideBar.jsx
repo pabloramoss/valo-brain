@@ -26,7 +26,6 @@ const SideBar = ()=> {
         as="nav"
       >
         <IconButton 
-          aria-label="Open Menu"
           background="none"
           _hover={{background:"none"}}
           icon={<HamburgerIcon color="white"/>}
@@ -55,12 +54,8 @@ const SideBar = ()=> {
       mb={4}
       >
         <Divider display={navSize=="small" ? "none" : "flex"} />
-        <Flex mt={4} align="center">
-          <Avatar size="sm" src="avatar-1.jpg" />
-          <Flex color="gray.400" flexDir="column" ml={4} display={navSize=="small" ? "none" : "flex"} >
-          <Heading as="h3" size="sm">Pablo Ramos</Heading>
-          <Text>Admin</Text>
-          </Flex>
+        <Flex color="gray.400" flexDir="column" display={navSize=="small" ? "none" : "flex"} >
+          <Text mt="20px" justifyContent="center" fontSize="xs">© {new Date().getFullYear()} Valobrain</Text>
         </Flex>
       </Flex>
     </Flex>
