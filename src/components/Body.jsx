@@ -8,7 +8,7 @@ import HomeVideos from './HomeVideos';
 const Body = ()=> {
 
   return(
-    <Box w="100%" h="100vh" backgroundColor="#141212">
+    <Box w="100%" h="94vh" backgroundColor="#141212">
       <SearchFilters />
       <Hero />
       <HomeVideos />

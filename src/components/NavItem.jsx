@@ -19,7 +19,7 @@ const NavItem = ({navSize, title, icon, active, itemSize})=> {
           w={navSize=="large" && "100%"}
         >
         <MenuButton w="100%">
-          <Flex>
+          <Flex alignItems="center">
             <Icon as={icon} fontSize={itemSize == "small" ? "sm" : "xl"} color={active ? "white":"gray.500"} />
             <Text ml={5} display={navSize == "small" ? "none" : "flex"} color="white">{title}</Text>
           </Flex>

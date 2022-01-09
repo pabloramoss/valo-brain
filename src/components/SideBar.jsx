@@ -42,7 +42,7 @@ const SideBar = ()=> {
         <NavItem navSize={navSize} icon={FaUser} title="About us"/>
         <NavItem navSize={navSize} icon={FaHandHoldingHeart} title="Donaciones"/>
       </Flex>
-      <Flex flexDir="column">
+      <Flex flexDir="column" p="5%">
         <NavItem navSize={navSize} icon={FaTwitter} itemSize="small" title="Twitter"/>
         <NavItem navSize={navSize} icon={FaYoutube} itemSize="small" title="Youtube"/>
         <NavItem navSize={navSize} icon={FaTiktok} itemSize="small" title="Tiktok"/>
