@@ -3,9 +3,12 @@ import SideBar from '../src/components/SideBar'
 import Navbar from '../src/components/Navbar'
 import { Flex, Box } from '@chakra-ui/react'
 import Body from '../src/components/Body'
-
+import youtube from '../pages/api/youtube'
+import SearchbarTest from '../src/components/SearchbarTest'
 
 export default function Home() {
+//youtube()
+  
   return (
     <Box>
       <Head>
@@ -18,6 +21,7 @@ export default function Home() {
         <SideBar />
         <Body />
       </Flex>
+      <SearchbarTest />
     </Box>
   )
 }
