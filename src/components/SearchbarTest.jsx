@@ -32,6 +32,7 @@ const SearchbarTest = ()=> {
   }
   const handleSubmit = e =>{
     e.preventDefault()
+    peticionGet()
   }
   const filtrar = (terminoBusqueda)=>{
     var resultadosBusqueda = tablaUsuarios.filter((elemento)=>{
