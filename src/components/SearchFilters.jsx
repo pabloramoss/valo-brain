@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Flex, Menu, MenuButton, MenuItem, MenuList, Button } from '@chakra-ui/react'
 import {  ChevronDownIcon } from '@chakra-ui/icons';
+import youtube from '../../../stratcall/src/apis/youtube';
 
 const SearchFilters = ()=> {
   const [mapFilter, setMapFilter] = useState("Mapa")
@@ -10,7 +11,18 @@ const SearchFilters = ()=> {
 
   const mapsList = valoMaps.map((item, index)=><MenuItem key={index} onClick={(e)=>setMapFilter(e.target.innerText)}>{item}</MenuItem>)
   const agentsList = valoAgents.map((item, index)=><MenuItem key={index} onClick={(e)=>setAgentFilter(e.target.innerText)}>{item}</MenuItem>)
-
+	const [videos, setVideos] = useState([])
+	const handleSubmit = async () =>{
+			const queryString = agentFilter + " " + mapFilter
+	    const response = await youtube.get('/search',{
+	        params: {
+	        q: queryString
+	        }
+	    })
+	    setVideos(response.data.items)
+	    console.log("response", videos)
+	    }
+	
   return(
     <Flex w="100%" h="6vh" backgroundColor="#7A7979" justifyContent="center" alignItems="center">
       <Menu>
@@ -29,7 +41,7 @@ const SearchFilters = ()=> {
           {agentsList}
         </MenuList>
       </Menu>
-      <Button mx="5px">Filtrar</Button>
+      <Button mx="5px" onClick={()=> handleSubmit()}>Filtrar</Button>
     </Flex>
   )
 }
