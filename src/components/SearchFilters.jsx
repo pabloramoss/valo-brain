@@ -3,7 +3,7 @@ import { Flex, Menu, MenuButton, MenuItem, MenuList, Button } from '@chakra-ui/r
 import {  ChevronDownIcon } from '@chakra-ui/icons';
 import youtube from '../../../stratcall/src/apis/youtube';
 
-const SearchFilters = ()=> {
+const SearchFilters = (props)=> {
   const [mapFilter, setMapFilter] = useState("Mapa")
   const [agentFilter, setAgentFilter] = useState("Agente")
   const valoMaps = ["Ascent", "Bind", "Breeze", "Fracture", "Haven", "Icebox", "Split"]
@@ -21,10 +21,12 @@ const SearchFilters = ()=> {
 	    })
 	    setVideos(response.data.items)
 	    console.log("response", videos)
+      const {dataVideo} = props.info
+      dataVideo(videos)
 	    }
 	
   return(
-    <Flex w="100%" h="6vh" backgroundColor="#7A7979" justifyContent="center" alignItems="center">
+    <Flex w="100%" h="6vh" backgroundColor="#7A7979" justifyContent="center" alignItems="center" pos="fixed">
       <Menu>
         <MenuButton mx="5px" as={Button} rightIcon={<ChevronDownIcon />}>
         {mapFilter}

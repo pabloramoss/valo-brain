@@ -18,6 +18,8 @@ const SideBar = ()=> {
     flexDir="column"
     justifyContent="space-between"
     backgroundColor="#2B2A2A"
+    pos="fixed"
+    zIndex={10}
     >
       <Flex
         p="5%"

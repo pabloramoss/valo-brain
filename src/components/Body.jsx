@@ -5,11 +5,11 @@ import Hero from './Hero';
 import HomeVideos from './HomeVideos';
 
 
-const Body = ()=> {
+const Body = (props)=> {
 
   return(
     <Box w="100%" h="94vh" backgroundColor="#141212">
-      <SearchFilters />
+      <SearchFilters info={props}/>
       <Hero />
       <HomeVideos />
     </Box>
