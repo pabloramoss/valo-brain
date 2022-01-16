@@ -35,7 +35,7 @@ export default function Home() {
           <VideoList handleVideoSelect={handleVideoSelect} videos={videos}/>
         </Stack>
       </Flex>
-      <SearchbarTest />
+      {/*<SearchbarTest />*/}
     </Box>
   )
 }
